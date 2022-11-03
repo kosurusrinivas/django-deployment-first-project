@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="{% static 'css/base1.css' %}" rel="stylesheet">
+    {% block child_css %}
+         In child-template wirte child-html-file related .css file reference!!
+        ***NOT-Visible***
+    {% endblock %}
+</head>
+<body>
+    <h1>Common for all child templates </h1>
+    <hr/>
+    {% block child_block %}
+        Anything outside of this block available to child tag...
+        ***Non-visible-code***
+        In child template, its specific-code should be coded in this block only
+    {% endblock %}
+     <h3>End of common code from base.html!!</h3>
+     <hr />
+</body>
+</html>
